@@ -99,3 +99,15 @@ https://www.codewars.com/kata/57b6f5aadb5b3d0ae3000611/train/javascript */
     }
       return 0
     }
+
+/* Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/javascript */
+
+  function findShort(s){
+    const sorted = s.split(' ').map(a => a.length).sort()
+    return Math.min(...sorted)   
+  }
+  
+  findShort("bitcoin take over the world maybe who knows perhaps") // 3
