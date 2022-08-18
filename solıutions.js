@@ -111,3 +111,53 @@ https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/javascript */
   }
   
   findShort("bitcoin take over the world maybe who knows perhaps") // 3
+
+/* 
+The Collatz Conjecture states that for any natural number n, if n is even, divide it by 2. If n is odd, multiply it by 3 and add 1. If you repeat the process continuously for n, n will eventually reach 1.
+
+For example, if n = 20, the resulting sequence will be:
+
+[ 20, 10, 5, 16, 8, 4, 2, 1 ]
+Write a program that will output the length of the Collatz Conjecture for any given n.
+In the example above, the output would be 8.
+https://www.codewars.com/kata/54fb963d3fe32351f2000102/solutions/javascript */
+
+  function collatz(n) {
+    let arr = [n]
+    while ( n>1 ){
+      if(n % 2 === 0){
+      n=n/2
+    } else if(n % 2 === 1){
+      n=(n*3)+1
+    }
+      arr.push(n)
+    }
+    return arr.length
+  }
+
+  collatz(20) //8
+//[ 20, 10, 5, 16, 8, 4, 2, 1 ]
+
+
+/* Given a string made up of letters a, b, and/or c, 
+switch the position of letters a and b (change a to b and vice versa). 
+Leave any incidence of c untouched. 
+https://www.codewars.com/kata/57f759bb664021a30300007d/javascript */
+
+function switcheroo(x){
+  let switchedArr = []
+  x.split('')
+  for(let i = 0; i< x.length; i++){
+    if(x[i] === 'c'){
+      switchedArr.push('c')
+    } else if(x[i]==='a'){
+      switchedArr.push('b')
+    } else if(x[i] === 'b'){
+      switchedArr.push('a')
+    }
+  }
+	return switchedArr.join('')
+}
+
+switcheroo('aaabcccbaaa') //'bbbacccabbb'
+switcheroo('ccccc') // 'ccccc'
