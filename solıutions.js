@@ -161,3 +161,39 @@ function switcheroo(x){
 
 switcheroo('aaabcccbaaa') //'bbbacccabbb'
 switcheroo('ccccc') // 'ccccc'
+
+/* 
+Given a Divisor and a Bound , Find the largest integer N , Such That ,
+Conditions :
+N is divisible by divisor
+N is less than or equal to bound
+N is greater than 0.
+https://www.codewars.com/kata/5aba780a6a176b029800041c/javascript
+ */
+
+function maxMultiple(divisor, bound){
+  return bound - (bound % divisor) 
+}
+
+/* 
+Pirates have notorious difficulty with enunciating. 
+They tend to blur all the letters together and scream at people.
+At long last, we need a way to unscramble what these pirates are saying.
+Write a function that will accept a jumble of letters as well as a dictionary, 
+and output a list of words that the pirate might have meant.
+
+For example:
+grabscrab( "ortsp", ["sport", "parrot", "ports", "matey"] )
+Should return ["sport", "ports"].
+
+Return matches in the same order as in the dictionary. 
+Return an empty array if there are no matches. 
+https://www.codewars.com/kata/52b305bec65ea40fe90007a7/javascript */
+
+function grabscrab(anagram, dictionary) {
+  anagram=anagram.split('').sort().join('')
+  return dictionary.filter(a=>a.split('').sort().join('')===anagram)
+  }
+  
+grabscrab("ainstuomn", ["mountains", "hills", "mesa"]) //["mountains"]
+grabscrab("oolp", ["donkey", "pool", "horse", "loop"]) //["pool", "loop"]
