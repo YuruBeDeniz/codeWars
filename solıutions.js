@@ -188,7 +188,9 @@ Should return ["sport", "ports"].
 
 Return matches in the same order as in the dictionary. 
 Return an empty array if there are no matches. 
-https://www.codewars.com/kata/52b305bec65ea40fe90007a7/javascript */
+https://www.codewars.com/kata/52b305bec65ea40fe90007a7/javascript 
+so, i had to compare 2 values for that, i sorted both values so that 
+i could compare them but i used filter method to return the value without change*/
 
 function grabscrab(anagram, dictionary) {
   anagram=anagram.split('').sort().join('')
@@ -197,3 +199,24 @@ function grabscrab(anagram, dictionary) {
   
 grabscrab("ainstuomn", ["mountains", "hills", "mesa"]) //["mountains"]
 grabscrab("oolp", ["donkey", "pool", "horse", "loop"]) //["pool", "loop"]
+
+/* You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+
+You can assume all values in the array are numbers.
+https://www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript */
+
+function smallEnough(a, limit){
+  return a.every(el => el <= limit)
+}
+
+function smallEnough(a, limit){
+  for(let i=0; i<a.length; i++){
+    if(a[i]>limit){
+      return false
+    }
+  }
+    return true
+  }
+  
+  smallEnough([66, 101], 200) //true
+  smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100) //false
