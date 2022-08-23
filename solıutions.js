@@ -220,3 +220,5 @@ function smallEnough(a, limit){
   
   smallEnough([66, 101], 200) //true
   smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100) //false
+// If you add an else, the loop never iterates, it's just unconditionally return in the very first iteration.
+// With an else return you will stop the loop (and function) always on the first iteration.
