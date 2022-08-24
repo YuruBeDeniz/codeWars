@@ -203,6 +203,8 @@ grabscrab("oolp", ["donkey", "pool", "horse", "loop"]) //["pool", "loop"]
 /* You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
 
 You can assume all values in the array are numbers.
+// If you add an else, the loop never iterates, it's just unconditionally return in the very first iteration.
+// With an else return you will stop the loop (and function) always on the first iteration.
 https://www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript */
 
 function smallEnough(a, limit){
@@ -220,35 +222,3 @@ function smallEnough(a, limit){
   
   smallEnough([66, 101], 200) //true
   smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100) //false
-
-/* Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with  places after the decimal.
-
-Note: This challenge introduces precision problems. The test cases are scaled to six decimal places, though answers with absolute error of up to  are acceptable.
-
-Example
-
-There are  elements, two positive, two negative and one zero. Their ratios are ,  and . Results are printed as:
-
-0.400000
-0.400000
-0.200000
-https://www.hackerrank.com/challenges/one-week-preparation-kit-plus-minus/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-one */
-
-  function plusMinus(arr) {
-    let positives = 0
-    let negatives = 0
-    let zeros = 0
-    for(let i = 0; i<arr.length; i++){
-      if(arr[i] > 0){
-        positives += 1
-      } else if(arr[i] === 0){
-        negatives += 1
-      } else if(arr[i] < 0){
-        zeros += 1    }
-    }
-    console.log((positives/arr.length).toFixed(6))  
-    console.log((zeros/arr.length).toFixed(6))
-    console.log((negatives/arr.length).toFixed(6))
-  }
-  
-  plusMinus([-4, 3, -9, 0, 4, 1]) // 0.500000  0.333333 0.166667
