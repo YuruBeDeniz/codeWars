@@ -24,3 +24,4 @@ humanReadable(59) // '00:00:59', 'humanReadable(59)');
 humanReadable(60) // '00:01:00', 'humanReadable(60)');
 humanReadable(90) // '00:01:30', 'humanReadable(90)');
 humanReadable(3599) // '00:59:59', 'humanReadable(3599)');
+humanReadable(359999) // '99:59:59'
