@@ -276,3 +276,15 @@ miniMaxSum([1,3,5,7,9]) //16 24
 
 
 
+/*  let leftBracket = [];
+  let rightBracket = [];
+  let total = leftBracket.concat(rightBracket)
+    for (let i = 0; i < str.length; i++) {     
+        if (str[i] === "(") {
+            leftBracket.push(str[i]);
+          console.log(leftBracket)
+        } else if (str[i] === ")") {
+            rightBracket.push(str[i])
+        }
+    }
+    return total.length; */
