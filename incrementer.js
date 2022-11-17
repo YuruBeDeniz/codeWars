@@ -16,7 +16,11 @@ https://www.codewars.com/kata/590e03aef55cab099a0002e8/javascript */
 
 function incrementer(nums) { 
     return nums.map((el,i) => (el+i+1)%10)
-   }
+}
+
+function incrementer(nums) { 
+ return nums.map((a,i) => +((a+i+1) + '').slice(-1))
+}   
    
    incrementer([1, 2, 3])//, [2, 4, 6]));
    incrementer([4, 6, 7, 1, 3])//, [5, 8, 0, 5, 8]));
