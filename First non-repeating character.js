@@ -20,3 +20,6 @@ function firstNonRepeatingLetter(s) {
   firstNonRepeatingLetter('stress')//, 't');
   firstNonRepeatingLetter('moonmen')//, 'e');
   firstNonRepeatingLetter('sTreSS') //T
+
+//how to get the stock data of Tesla in javascript?
+
