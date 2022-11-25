@@ -12,6 +12,12 @@ https://www.codewars.com/kata/52f3149496de55aded000410/typescript */
 export function parse(data: string): number[] {
     return String(Math.abs(n)).split('').reduce((accumulator, value) => Number(accumulator) + Number(value), 0);
 }
+
+export function parse(data: string): number[] {
+   let sum = 0;
+   String(Math.abs(n)).split('').map(e => sum += Number(e));
+   return sum;
+}
   
   console.log(sumDigits(10))//, 1);
   console.log(sumDigits(99))//, 18);
