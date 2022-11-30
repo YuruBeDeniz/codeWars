@@ -19,3 +19,23 @@ export function arrayDiff(a: number[], b: number[]): number[] {
   arrayDiff([3, 4], [3])//).to.eql([4], 'a was [3, 4], b was [3]');
   arrayDiff([1, 8, 2], [])//).to.eql([1, 8, 2], 'a was [1, 8, 2], b was []');
   arrayDiff([1, 2, 3], [1, 2])//).to.eql([3], 'a was [1, 2, 3], b was [1, 2]'
+
+/* function arrayDiff(a, b) {
+  if(b.length==0 || a.length==0)
+    return a;
+  for(let i =0;i<a.length;i++){
+    for(let j=0;j<b.length;j++){
+      if(a[i]==b[j]){
+        a.splice(i,1); //ne zaman aynı eleman olursa, a arrayinden o elemanı çıkar;
+        i--; //
+      }
+    }
+  }
+  return a;
+} */  
+
+/* 
+i--
+because, if for example, you are in the loop i=2 and you splice an element, elem[2],
+then the next element of the array is going to take the same index (2) 
+but your loop is going to continue with index=3 and you are going to miss that element. */
