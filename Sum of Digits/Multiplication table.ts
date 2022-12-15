@@ -10,10 +10,10 @@ for given example, the return value should be: [[1,2,3],[2,4,6],[3,6,9]]
 https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/typescript */
 
 export function multiplicationTable (size: number): number[][] {
-    let result = [];
-    for(let i = 1; i < size+1; i++){
-      let subArray = [];
-      for(let j = 1; j <size+1; j++){
+    let result: number[][] = [];
+    for(let i = 1; i <= size; i++){
+      let subArray: number[] = [];
+      for(let j = 1; j <=size; j++){
         subArray.push(i*j)
       }
       result.push(subArray)
